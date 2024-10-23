@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profil Mahasiswa</title>
+    <link rel="stylesheet" href="Profile.css">
+    <script>
+        function switchLayout(layout) {
+            document.body.className = layout; // Mengganti class di body untuk layout
+            // Reset content to biodata when switching layouts
+            showContent('biodata');
+        }
+
+        function showContent(content) {
+            document.getElementById('section-content').innerHTML = document.getElementById(content).innerHTML;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="jupit.jpg" alt="Logo" class="profile-pic">
+        </div>
+        <div class="profile-info">
+            <h1>Profil Mahasiswa</h1> 
+        </div>
+    </header>
+    <div class="container">
+        <div class="container-top">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('biodata')">Biodata</a></li>
+                    <li><a href="#" onclick="showSection('pendidikan')">Pendidikan</a></li>
+                    <li><a href="#" onclick="showSection('pengalaman')">Pengalaman</a></li>
+                    <li><a href="#" onclick="showSection('keahlian')">Keahlian</a></li>
+                    <li><a href="#" onclick="showSection('publikasi')">Publikasi</a></li>
+                </ul>
+            </nav>
+            <section id="content">
+                <div id="biodata" class="section-content" style="display:block;">
+                    <h3>Biodata</h3>
+                    <p>NIM: 2023081037</p>
+                    <p>Nama: Juwita Eriyanti</p>
+                    <p>Tempat Lahir: Jakarta</p>
+                    <p>Tanggal Lahir: 17 Maret 2005</p>
+                    <p>MBTI: ENFP-A</p>
+                </div>
+                <div id="pendidikan" class="section-content" style="display:none;">
+                    <h1>Pendidikan</h1>
+                    <p>TK: RA Raudatul Hikmah</p>
+                    <p>SD: SD Islam At Taqwa</p>
+                    <p>SMP: MTs Al Adzkar</p>
+                    <p>SMA: SMA Al Adzkar</p>
+                    <p>Kuliah: Universitas Pembangunan Jaya</p>
+                </div>
+                <div id="pengalaman" class="section-content" style="display:none;">
+                    <h2>Pengalaman</h2>
+                    <h3>Organisasi</h3>
+                    <ul>
+                        <li>Ketua Archery Club</li>
+                        <li>Ketua Divisi Bahasa</li>
+                        <li>Panitia GIDHub divisi Sponsorship</li>
+                        <li>Panitia Prodi Gathering</li>
+                        <li>Mentor ISLT</li>
+                    </ul>
+                </div>
+                <div id="keahlian" class="section-content" style="display:none;">
+                    <h1>Keahlian</h1>
+                    <ul>
+                       <li>Berenang</li>
+                       <li>Memanah</li>
+                       <li>Memanggang Kue</li>
+                       <li>Pengembangan Web</li>
+                       <li>UI Desain</li>
+                    </ul>
+                </div>
+                <div id="publikasi" class="section-content" style="display:none;">
+                    <h2>Publikasi</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <aside>
+            <h1>Hobi</h1>
+            <ul>
+                <li>Menulis</li> 
+                <li>Membaca</li> 
+                <li>Baking</li> 
+                <li>Mendesain Interior</li> 
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>Twitter: <a href="https://x.com/ketuabahasa2022" target="_blank">@ketuabahasa2022</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/juwrynt/">@juwrynt</a></p>
+            <p>Youtube: <a href="https://www.youtube.com/channel/UCS3p7NZKWPy7-Eq-R1fS2rw">@juwrynt</a></p>
+        </div>
+        <div class="footer-center">
+            <p>© 2024 Juwita Eriyanti - All Rights Reserved</p>
+        </div>
+        <div class="footer-right">
+            <p><strong>Profile Juwi</strong></p>
+            <p>Welcome to my Profile!</p>
+        </div>
+    </footer>    
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body> 
+</html>
